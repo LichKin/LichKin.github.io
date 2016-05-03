@@ -79,7 +79,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -116,7 +116,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
 					</div>
 				</section>
 				
@@ -202,10 +202,10 @@
 
       <div class="body-wrap">
   
-    <article id="post-我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-使用Hexo快速搭建个人网站" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/28/我的第一篇博客/" class="article-date">
+      <a href="/2016/04/28/使用Hexo快速搭建个人网站/" class="article-date">
   	<time datetime="2016-04-28T06:08:00.000Z" itemprop="datePublished">2016-04-28</time>
 </a>
     </div>
@@ -219,7 +219,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/28/我的第一篇博客/">我的第一篇博客</a>
+      <a class="article-title" href="/2016/04/28/使用Hexo快速搭建个人网站/">如何使用Hexo快速搭建个人网站</a>
     </h1>
   
 
@@ -228,7 +228,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天是个值得庆祝的日子，有了自己的域名博客网站，感谢hexo，感谢党和人民，感谢祖国！<br>
+        <p>很早之前就想过搭建一个简单的网站，用于写一些技术博客和记录学习过程中遇到的问题以及心得，像很多人想的一样觉得要掌握Web前端（HTML，CSS，JS）的开发技术还要懂得服务器端的开发（SSH或者Node），除此之外还要购买或者租借域名服务器，很麻烦。</p>
+<p>当然对于一个全栈工程师或者想要成为全栈工程师的人来说，搭建一个这样的网站并不难，但我更推荐你和我一样使用这种方式：<a href="http://drubear.github.io/2016/01/28/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E7%94%A8Hexo%E5%9C%A8GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">手把手教你用Hexo在GitHub搭建博客</a></p>
+<p>在使用npm安装hexo的时候遇到了一些问题，一个叫做‘fsevents’的node模块安装失败，最后安装成功使用的命令是：</p>
+<pre><code>sudo npm install --unsafe-perm --verbose -g hexo
+</code></pre><p>这样安装完hexo会报出一个警告：</p>
+<pre><code>Cannot find module &apos;./build/Release/DTraceProviderBindings&apos;
+</code></pre><p>但是不会影响常用的命令的正常执行，所以就没有太在意。</p>
       
     </div>
     
@@ -236,76 +242,15 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 	</div>
 
       
 
       
         <p class="article-more-link">
-          <a  href="/2016/04/28/我的第一篇博客/#more">more >></a>
+          <a  href="/2016/04/28/使用Hexo快速搭建个人网站/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/26/hello-world/" class="article-date">
-  	<time datetime="2016-04-26T01:26:57.000Z" itemprop="datePublished">2016-04-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/26/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
       
       <div class="clearfix"></div>
     </div>
