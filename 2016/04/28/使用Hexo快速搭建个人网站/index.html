@@ -6,19 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>如何使用Hexo快速搭建个人网站 | Richie的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="很早之前就想过搭建一个简单的网站，用于写一些技术博客和记录学习过程中遇到的问题以及心得，像很多人想的一样觉得要掌握Web前端（HTML，CSS，JS）的开发技术还要懂得服务器端的开发（SSH或者Node），除此之外还要购买或者租借域名服务器，很麻烦。
-当然对于一个全栈工程师或者想要成为全栈工程师的人来说，搭建一个这样的网站并不难，但我更推荐你和我一样使用这种方式：手把手教你用Hexo在GitHub">
+  <meta name="description" content="很早之前就想过搭建一个简单的网站，用于写一些技术博客和记录学习过程中遇到的问题以及心得，像很多人想的一样觉得要掌握Web前端（HTML，CSS，JS）的开发技术还要懂得服务器端的开发（SSH或者Node），除此之外还要购买或者租借域名服务器，很麻烦。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何使用Hexo快速搭建个人网站">
 <meta property="og:url" content="http://yoursite.com/2016/04/28/使用Hexo快速搭建个人网站/index.html">
 <meta property="og:site_name" content="Richie的博客">
-<meta property="og:description" content="很早之前就想过搭建一个简单的网站，用于写一些技术博客和记录学习过程中遇到的问题以及心得，像很多人想的一样觉得要掌握Web前端（HTML，CSS，JS）的开发技术还要懂得服务器端的开发（SSH或者Node），除此之外还要购买或者租借域名服务器，很麻烦。
-当然对于一个全栈工程师或者想要成为全栈工程师的人来说，搭建一个这样的网站并不难，但我更推荐你和我一样使用这种方式：手把手教你用Hexo在GitHub">
-<meta property="og:updated_time" content="2016-05-03T07:23:48.000Z">
+<meta property="og:description" content="很早之前就想过搭建一个简单的网站，用于写一些技术博客和记录学习过程中遇到的问题以及心得，像很多人想的一样觉得要掌握Web前端（HTML，CSS，JS）的开发技术还要懂得服务器端的开发（SSH或者Node），除此之外还要购买或者租借域名服务器，很麻烦。">
+<meta property="og:updated_time" content="2016-05-21T11:22:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何使用Hexo快速搭建个人网站">
-<meta name="twitter:description" content="很早之前就想过搭建一个简单的网站，用于写一些技术博客和记录学习过程中遇到的问题以及心得，像很多人想的一样觉得要掌握Web前端（HTML，CSS，JS）的开发技术还要懂得服务器端的开发（SSH或者Node），除此之外还要购买或者租借域名服务器，很麻烦。
-当然对于一个全栈工程师或者想要成为全栈工程师的人来说，搭建一个这样的网站并不难，但我更推荐你和我一样使用这种方式：手把手教你用Hexo在GitHub">
+<meta name="twitter:description" content="很早之前就想过搭建一个简单的网站，用于写一些技术博客和记录学习过程中遇到的问题以及心得，像很多人想的一样觉得要掌握Web前端（HTML，CSS，JS）的开发技术还要懂得服务器端的开发（SSH或者Node），除此之外还要购买或者租借域名服务器，很麻烦。">
   
     <link rel="alternative" href="/atom.xml" title="Richie的博客" type="application/atom+xml">
   
@@ -120,7 +117,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+						<a href="/tags/Scrum/" style="font-size: 10px;">Scrum</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/敏捷开发/" style="font-size: 10px;">敏捷开发</a>
 					</div>
 				</section>
 				
@@ -242,19 +239,34 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>很早之前就想过搭建一个简单的网站，用于写一些技术博客和记录学习过程中遇到的问题以及心得，像很多人想的一样觉得要掌握Web前端（HTML，CSS，JS）的开发技术还要懂得服务器端的开发（SSH或者Node），除此之外还要购买或者租借域名服务器，很麻烦。</p>
+<a id="more"></a>
 <p>当然对于一个全栈工程师或者想要成为全栈工程师的人来说，搭建一个这样的网站并不难，但我更推荐你和我一样使用这种方式：<a href="http://drubear.github.io/2016/01/28/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E7%94%A8Hexo%E5%9C%A8GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">手把手教你用Hexo在GitHub搭建博客</a></p>
 <p>在使用npm安装hexo的时候遇到了一些问题，一个叫做‘fsevents’的node模块安装失败，最后安装成功使用的命令是：</p>
 <pre><code>sudo npm install --unsafe-perm --verbose -g hexo
 </code></pre><p>这样安装完hexo会报出一个警告：</p>
 <pre><code>Cannot find module &apos;./build/Release/DTraceProviderBindings&apos;
 </code></pre><p>但是不会影响常用的命令的正常执行，所以就没有太在意。</p>
-<a id="more"></a>
+
       
     </div>
     
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2016/05/21/Scrum敏捷开发流程简介/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Scrum敏捷开发流程简介
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
