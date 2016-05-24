@@ -79,7 +79,7 @@
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -228,49 +228,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>转载请注明<a href="http://lichkin.github.io/" target="_blank" rel="external">原作者</a>，如果觉得有用，心里夸我一句就好</strong></p>
+        <p><strong>转载请注明<a href="http://lichkin.github.io/">原作者</a>，如果觉得有用，心里夸我一句就好</strong></p>
 <h5 id="小记"><a href="#小记" class="headerlink" title="小记"></a>小记</h5><p>为了能够更好的掌握和使用Android中的消息通信机制参阅了几篇优秀的博客，也阅读了相关的源码，在此做了一下简单的总结，详细的源码分析的链接在文章的底部给出了。</p>
 <h5 id="正文分割线"><a href="#正文分割线" class="headerlink" title="正文分割线"></a>正文分割线</h5><hr>
-<p>Android的主线程也就是UI线程不是线程安全的，如果在子线程中尝试UI相关操作会导致程序崩溃。有好几种方法可以在子线程中操作UI，但是归根结底它们实现的原理还是借助与Android的消息通信机制也就是Handler＋Message。</p>
-<h3 id="Looper-Handler和MessageQueue"><a href="#Looper-Handler和MessageQueue" class="headerlink" title="Looper,Handler和MessageQueue"></a>Looper,Handler和MessageQueue</h3><p>先看一段代码：</p>
-<pre><code>class LooperThread extends Thread {  
-      public Handler mHandler;  
-
-      public void run() {  
-          Looper.prepare();  
-
-          mHandler = new Handler() {  
-              public void handleMessage(Message msg) {  
-                  // process incoming messages here  
-              }  
-          };  
-
-          Looper.loop();  
-      }  
-  } 
-</code></pre><p>这是一个标准的异步消息处理线程的写法，下面就参照上面的代码梳理一下消息处理的流程。</p>
-<ul>
-<li>Looper.prepare()</li>
-</ul>
-<p>首先Looper是负责管理线程的消息队列（MessageQueue）和消息循环，而工作线程也就是子线程默认没有消息队列和消息循环，如果想让工作线程具有消息队列和消息循环，就需要在线程中先调用Looper.prepare()来创建消息队列，所以这个方法的主要作用是创建一个新的Looper对象保存到ThreadLocal中供后续的方法使用</p>
-<p><em>ThreadLocal用来存储与线程相关的变量和对象，接下来会有一篇单独的文章介绍它</em></p>
-<ul>
-<li>Handler类</li>
-</ul>
-<p>Handler类主要有两个任务，发送消息和通过回调借口处理消息，发送消息的实质就是将消息加入到Looper管理的消息队列中，并不做其它实际的处理；处理消息就是上面代码中的handleMessage()的方法</p>
-<ul>
-<li>Looper.loop()</li>
-</ul>
-<p>这个是整个消息处理中比较核心的地方，主要的作用是循环从消息队列中取出消息并处理（触发回调），如果消息队列为空则处于阻塞状态</p>
-<p>一般情况下我们直接在Activity中创建Handler对象或者发送消息是不需要写Looper.prepare()和Looper.loop()这两个方法的，那是因为实现Activity底层类的main()方法已经帮我们调用了这两个方法了</p>
-<h3 id="需要注意的问题"><a href="#需要注意的问题" class="headerlink" title="需要注意的问题"></a>需要注意的问题</h3><ul>
-<li>在构建Handler对象的时候可以传入一个Looper对象，如果不传默认使用当前线程中的looper对象，也就是Looper.myLooper获取到的对象</li>
-<li>Looper有两种方法退出，quit方法直接退出，quitSafety只是设定一个退出标记，在消息队列中的所有消息处理完之后会安全的退出。在子线程中，如果手动为其创建了Looper那么在所有的事情完成后应该调用quit方法来终止消息循环，否则这个线程会一直处于等待状态。</li>
-</ul>
-<h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><p><a href="http://blog.csdn.net/guolin_blog/article/details/9991569" target="_blank" rel="external">http://blog.csdn.net/guolin_blog/article/details/9991569</a></p>
-<p><a href="http://blog.csdn.net/liuhe688/article/details/6407225" target="_blank" rel="external">http://blog.csdn.net/liuhe688/article/details/6407225</a></p>
-<p><em>Android开发艺术探索</em></p>
-
+<p>Android的主线程也就是UI线程不是线程安全的，如果在子线程中尝试UI相关操作会导致程序崩溃。有好几种方法可以在子线程中操作UI，<br>
       
     </div>
     
@@ -283,6 +244,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/05/24/浅析Android消息机制/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

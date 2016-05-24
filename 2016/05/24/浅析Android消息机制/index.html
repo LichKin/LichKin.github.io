@@ -9,7 +9,7 @@
   <meta name="description" content="转载请注明原作者，如果觉得有用，心里夸我一句就好
 小记为了能够更好的掌握和使用Android中的消息通信机制参阅了几篇优秀的博客，也阅读了相关的源码，在此做了一下简单的总结，详细的源码分析的链接在文章的底部给出了。
 正文分割线
-Android的主线程也就是UI线程不是线程安全的，如果在子线程中尝试UI相关操作会导致程序崩溃。有好几种方法可以在子线程中操作UI，但是归根结底它们实现的原理还是借助与A">
+Android的主线程也就是UI线程不是线程安全的，如果在子线程中尝试UI相关操作会导致程序崩溃。有好几种方法可以在子线程中操作UI，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅析Android消息机制">
 <meta property="og:url" content="http://yoursite.com/2016/05/24/浅析Android消息机制/index.html">
@@ -17,14 +17,14 @@ Android的主线程也就是UI线程不是线程安全的，如果在子线程�
 <meta property="og:description" content="转载请注明原作者，如果觉得有用，心里夸我一句就好
 小记为了能够更好的掌握和使用Android中的消息通信机制参阅了几篇优秀的博客，也阅读了相关的源码，在此做了一下简单的总结，详细的源码分析的链接在文章的底部给出了。
 正文分割线
-Android的主线程也就是UI线程不是线程安全的，如果在子线程中尝试UI相关操作会导致程序崩溃。有好几种方法可以在子线程中操作UI，但是归根结底它们实现的原理还是借助与A">
-<meta property="og:updated_time" content="2016-05-24T13:19:12.000Z">
+Android的主线程也就是UI线程不是线程安全的，如果在子线程中尝试UI相关操作会导致程序崩溃。有好几种方法可以在子线程中操作UI，">
+<meta property="og:updated_time" content="2016-05-24T13:21:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅析Android消息机制">
 <meta name="twitter:description" content="转载请注明原作者，如果觉得有用，心里夸我一句就好
 小记为了能够更好的掌握和使用Android中的消息通信机制参阅了几篇优秀的博客，也阅读了相关的源码，在此做了一下简单的总结，详细的源码分析的链接在文章的底部给出了。
 正文分割线
-Android的主线程也就是UI线程不是线程安全的，如果在子线程中尝试UI相关操作会导致程序崩溃。有好几种方法可以在子线程中操作UI，但是归根结底它们实现的原理还是借助与A">
+Android的主线程也就是UI线程不是线程安全的，如果在子线程中尝试UI相关操作会导致程序崩溃。有好几种方法可以在子线程中操作UI，">
   
     <link rel="alternative" href="/atom.xml" title="Richie的博客" type="application/atom+xml">
   
@@ -89,7 +89,7 @@ Android的主线程也就是UI线程不是线程安全的，如果在子线程�
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -250,7 +250,7 @@ Android的主线程也就是UI线程不是线程安全的，如果在子线程�
         <p><strong>转载请注明<a href="http://lichkin.github.io/" target="_blank" rel="external">原作者</a>，如果觉得有用，心里夸我一句就好</strong></p>
 <h5 id="小记"><a href="#小记" class="headerlink" title="小记"></a>小记</h5><p>为了能够更好的掌握和使用Android中的消息通信机制参阅了几篇优秀的博客，也阅读了相关的源码，在此做了一下简单的总结，详细的源码分析的链接在文章的底部给出了。</p>
 <h5 id="正文分割线"><a href="#正文分割线" class="headerlink" title="正文分割线"></a>正文分割线</h5><hr>
-<p>Android的主线程也就是UI线程不是线程安全的，如果在子线程中尝试UI相关操作会导致程序崩溃。有好几种方法可以在子线程中操作UI，但是归根结底它们实现的原理还是借助与Android的消息通信机制也就是Handler＋Message。</p>
+<p>Android的主线程也就是UI线程不是线程安全的，如果在子线程中尝试UI相关操作会导致程序崩溃。有好几种方法可以在子线程中操作UI，<br><a id="more"></a><br>但是归根结底它们实现的原理还是借助与Android的消息通信机制也就是Handler＋Message。</p>
 <h3 id="Looper-Handler和MessageQueue"><a href="#Looper-Handler和MessageQueue" class="headerlink" title="Looper,Handler和MessageQueue"></a>Looper,Handler和MessageQueue</h3><p>先看一段代码：</p>
 <pre><code>class LooperThread extends Thread {  
       public Handler mHandler;  
